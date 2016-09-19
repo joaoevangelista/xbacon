@@ -1,0 +1,2 @@
+defmodule XBacon do
+end
