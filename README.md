@@ -1,7 +1,7 @@
 ![bacon](https://github.com/joaoevangelista/xbacon/blob/master/art/bacon.png)
 # xBacon
 
-
+[![Build Status](https://travis-ci.org/joaoevangelista/xbacon.svg?branch=master)](https://travis-ci.org/joaoevangelista/xbacon)
 
 A set of validators and matchers, focusing on Brazilian needs, but general too!
 
