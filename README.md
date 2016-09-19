@@ -32,7 +32,7 @@ and pipe the validations on your changeset!
 
 ```elixir
 defmodule App.Person do
-  import XBacon.Changeset
+  import XBacon.Changeset.CPF
 
   # ....
 
