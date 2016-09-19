@@ -1,9 +1,7 @@
-defmodule XBacon.Person do
+defmodule XBacon.Stub.Person do
   use Ecto.Schema
 
-  import Ecto
   import Ecto.Changeset
-  import Ecto.Query
 
   schema "persons" do
     field :cpf, :string

@@ -3,7 +3,7 @@ defmodule XBacon.Matchers.CPF do
   @cpf_pattern ~r/([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-][0-9]{2})|(d{11})/s
 
   def valid?(value) do
-    Regex.match?(@cpf_pattern, value)
+    Regex.match?(@cpf_pattern, value || "")
   end
 
   def strictly_valid?(value) do
