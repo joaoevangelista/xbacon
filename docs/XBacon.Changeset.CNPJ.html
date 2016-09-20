@@ -99,8 +99,8 @@ using the <a href="XBacon.Matchers.CNPJ.html"><code class="inline">XBacon.Matche
     <a href="#validate_cnpj/3">validate_cnpj(changeset, field \\ :cnpj, opts \\ [])</a>
   </div>
   
-    <div class="summary-synopsis"><p>Validates the given changeset looking for the <code class="inline">cnpj</code> field.
- ## Example</p>
+    <div class="summary-synopsis"><p>Validates the given changeset looking for the <code class="inline">cnpj</code> field,
+it allows customization of lookup field and error messages</p>
 </div>
   
 </div>
@@ -132,7 +132,7 @@ using the <a href="XBacon.Matchers.CNPJ.html"><code class="inline">XBacon.Matche
     </a>
     <span class="signature">validate_cnpj(changeset, field \\ :cnpj, opts \\ [])</span>
     
-      <a href="https://github.com/joaoevangelista/xbacon/blob/master/lib/changesets/cnpj_changeset.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/joaoevangelista/xbacon/blob/master/lib/changesets/cnpj_changeset.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -140,14 +140,23 @@ using the <a href="XBacon.Matchers.CNPJ.html"><code class="inline">XBacon.Matche
   </div>
   
   <section class="docstring">
-    <p>Validates the given changeset looking for the <code class="inline">cnpj</code> field.
- ## Example</p>
+    <p>Validates the given changeset looking for the <code class="inline">cnpj</code> field,
+it allows customization of lookup field and error messages.</p>
+<h2 id="validate_cnpj/3-example" class="section-heading">
+  <a href="#validate_cnpj/3-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="elixir">struct
 |&gt; cast(params, @fields)
 |&gt; validate_cnpj</code></pre>
 <p>It will look up for a field named :cnpj to acquire the value, if you
 do not use this name on field you can customize as second arity.</p>
-<p> ## Example</p>
+<h2 id="validate_cnpj/3-example" class="section-heading">
+  <a href="#validate_cnpj/3-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="elixir"> struct
  |&gt; cast(params, @fields)
  |&gt; validate_cnpj(:cadastro_juridico)</code></pre>

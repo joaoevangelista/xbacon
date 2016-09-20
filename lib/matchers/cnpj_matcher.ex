@@ -1,6 +1,6 @@
 defmodule XBacon.Matchers.CNPJ do
   @moduledoc """
-  Defines matchers to verify cnpj values
+  Defines matchers to verify CNPJ values
   """
 
   @cnpj_pattern ~r/([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})/

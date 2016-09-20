@@ -2,6 +2,11 @@ defmodule XBacon.Changeset.CPF do
   import Ecto.Changeset
   import XBacon.Matchers.CPF
 
+  @moduledoc """
+  Defines a set of validations that can be applied on a changeset using the
+  `XBacon.Matchers.CPF` matchers.
+  """
+
   @doc """
   Validates the given field on `changeset` inflecting the rules for CPF
   Accepted formats are:

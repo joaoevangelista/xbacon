@@ -1,13 +1,17 @@
 defmodule XBacon.Changeset.CNPJ do
   import Ecto.Changeset
+  import XBacon.Matchers.CNPJ
 
   @moduledoc """
   Defines a set of validations that can be applied on a changeset
   using the `XBacon.Matchers.CNPJ` matchers
   """
+
   @doc """
-  Validates the given changeset looking for the `cnpj` field.
-   ## Example
+  Validates the given changeset looking for the `cnpj` field,
+  it allows customization of lookup field and error messages.
+
+  ## Example
 
       struct
       |> cast(params, @fields)
@@ -16,7 +20,7 @@ defmodule XBacon.Changeset.CNPJ do
   It will look up for a field named :cnpj to acquire the value, if you
   do not use this name on field you can customize as second arity.
 
-   ## Example
+  ## Example
 
        struct
        |> cast(params, @fields)
@@ -26,7 +30,7 @@ defmodule XBacon.Changeset.CNPJ do
   """
   def validate_cnpj(changeset, field \\ :cnpj, opts \\ []) do
     cnpj = get_field(changeset, field)
-    case XBacon.Matchers.CNPJ.valid? cnpj do
+    case valid? cnpj do
       true -> changeset
       false ->
         add_error(changeset, field, Keyword.get(opts, :message, "CNPJ has invalid format."))

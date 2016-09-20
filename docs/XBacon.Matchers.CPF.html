@@ -72,6 +72,11 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>Defines matchers that validates CPF values.</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -93,11 +98,19 @@
     <a href="#strictly_valid?/1">strictly_valid?(value)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Validates the given <code class="inline">value</code> as a CPF, in addition to the format validation
+it also  verifies the integrity of the input, doing the calculations of the
+last two digits, called as verfier digits</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#valid?/1">valid?(value)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Validates the given <code class="inline">value</code> on the following formats</p>
+</div>
   
 </div>
 
@@ -128,7 +141,7 @@
     </a>
     <span class="signature">strictly_valid?(value)</span>
     
-      <a href="https://github.com/joaoevangelista/xbacon/blob/master/lib/matchers/cpf_matcher.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/joaoevangelista/xbacon/blob/master/lib/matchers/cpf_matcher.ex#L30" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -136,7 +149,12 @@
   </div>
   
   <section class="docstring">
-    
+    <p>Validates the given <code class="inline">value</code> as a CPF, in addition to the format validation
+it also  verifies the integrity of the input, doing the calculations of the
+last two digits, called as verfier digits.</p>
+<p>Returns <code class="inline">true</code> if the value is matched against valid patterns
+otherwise, <code class="inline">false</code>.</p>
+
   </section>
 </div>
 <div class="detail" id="valid?/1">
@@ -146,7 +164,7 @@
     </a>
     <span class="signature">valid?(value)</span>
     
-      <a href="https://github.com/joaoevangelista/xbacon/blob/master/lib/matchers/cpf_matcher.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/joaoevangelista/xbacon/blob/master/lib/matchers/cpf_matcher.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -154,7 +172,18 @@
   </div>
   
   <section class="docstring">
-    
+    <p>Validates the given <code class="inline">value</code> on the following formats:</p>
+<ul>
+<li><code class="inline">xxx.xxx.xxx/xx</code>
+</li>
+<li><code class="inline">xxxxxxxxx-xx</code>
+</li>
+<li><p><code class="inline">xxxxxxxxxxx</code></p>
+<p>  Returns <code class="inline">true</code> if the value is matched against valid patterns
+  otherwise, <code class="inline">false</code>.</p>
+</li>
+</ul>
+
   </section>
 </div>
 

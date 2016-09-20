@@ -1,11 +1,32 @@
 defmodule XBacon.Matchers.CPF do
+  @moduledoc """
+  Defines matchers that validates CPF values.
+  """
 
   @cpf_pattern ~r/([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-][0-9]{2})|(d{11})/s
 
+  @doc """
+  Validates the given `value` on the following formats:
+
+    - `xxx.xxx.xxx/xx`
+    - `xxxxxxxxx-xx`
+    - `xxxxxxxxxxx`
+
+    Returns `true` if the value is matched against valid patterns
+    otherwise, `false`.
+  """
   def valid?(value) do
     Regex.match?(@cpf_pattern, value || "")
   end
 
+  @doc """
+  Validates the given `value` as a CPF, in addition to the format validation
+  it also  verifies the integrity of the input, doing the calculations of the
+  last two digits, called as verfier digits.
+
+  Returns `true` if the value is matched against valid patterns
+  otherwise, `false`.
+  """
   def strictly_valid?(value) do
     case valid?(value) do
       true ->
