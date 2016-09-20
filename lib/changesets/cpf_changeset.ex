@@ -31,12 +31,12 @@ defmodule XBacon.Changeset.CPF do
 
     Both the field and error messages can be customizeds. The field defaults
     to `:cpf` as the function name implies, customization can be used like:
-    `validate_strictly_cpf(changeset, :cadastro_pessoa_fisica)`
+    `validate_cpf_strictly(changeset, :cadastro_pessoa_fisica)`
 
     The error message can be customized using a `message:` keyword like:
-    `validate_strictly_cpf(changeset, :cpf, message: "My error message")`
+    `validate_cpf_strictly(changeset, :cpf, message: "My error message")`
     """
-    def validate_strictly_cpf(changeset, field \\ :cpf, opts \\ []) do
+    def validate_cpf_strictly(changeset, field \\ :cpf, opts \\ []) do
       cpf = get_field(changeset, field, "")
       case strictly_valid?(cpf) do
         true -> changeset

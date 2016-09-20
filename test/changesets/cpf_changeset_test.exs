@@ -36,12 +36,12 @@ defmodule XBaconTest.Changeset.CPF do
   end
 
   test "person with valid should pass the validation of it's digits" do
-    changeset = Person.changeset(%Person{}, %{cpf: @valid_cpf}) |> CPF.validate_strictly_cpf
+    changeset = Person.changeset(%Person{}, %{cpf: @valid_cpf}) |> CPF.validate_cpf_strictly
     assert changeset.valid?
   end
 
   test "person with invalid verification digits must not be acceptable for strictly validation" do
-    changeset = Person.changeset(%Person{}, %{cpf: @invalid_verifier_cpf}) |> CPF.validate_strictly_cpf
+    changeset = Person.changeset(%Person{}, %{cpf: @invalid_verifier_cpf}) |> CPF.validate_cpf_strictly
     refute changeset.valid?
   end
 
