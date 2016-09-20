@@ -3,12 +3,16 @@ defmodule XBacon.Mixfile do
 
   def project do
     [app: :xbacon,
-     version: "0.1.0",
-     elixir: "~> 1.3",
-     elixirc_paths: elixirc_paths(Mix.env),
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+    name: "xBacon",
+    version: "0.1.0",
+    elixir: "~> 1.3",
+    elixirc_paths: elixirc_paths(Mix.env),
+    source_url: "https://github.com/joaoevangelista/xbacon",
+    homepage_url: "https://github.com/joaoevangelista/xbacon",
+    deps: deps(),
+    docs: [logo: "art/bacon.png",
+    extras: ["README.md"]],
+    deps: deps()]
   end
 
   # Configuration for the OTP application
@@ -32,6 +36,7 @@ defmodule XBacon.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:ecto, ">= 2.0.0"}]
+    [{:ecto, ">= 2.0.0"},
+    {:ex_doc, "~> 0.12", only: :dev}]
   end
 end
