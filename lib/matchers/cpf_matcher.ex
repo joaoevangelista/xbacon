@@ -37,7 +37,9 @@ defmodule XBacon.Matchers.CPF do
     defp second_digit(values) do
       sum = Enum.slice(values, 0..10)
       |> sum_reversing(11)
-      11 - rem(sum, 11)
+      digit = 11 - rem(sum, 11)
+      # applies the rule that if the second number is greater than nine, it is a 0
+      guard_digit digit
     end
 
     defp sum_reversing(values, weigth \\ 10, acc \\ 0 , start \\ 0) do
@@ -48,6 +50,8 @@ defmodule XBacon.Matchers.CPF do
       else
         acc
       end
-
     end
+
+    defp guard_digit(digit), do: if digit > 9, do: 0, else: digit
+
   end
