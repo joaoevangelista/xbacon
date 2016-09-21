@@ -6,9 +6,10 @@ defmodule XBacon.Stub.Person do
   schema "persons" do
     field :cpf, :string
     field :cnpj, :string
+    field :cep, :string
   end
 
-  @fields ~w(cpf cnpj)a
+  @fields ~w(cpf cnpj cep)a
 
   def changeset(model, params \\ %{}) do
     model
