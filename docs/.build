@@ -6,10 +6,12 @@ XBacon.html
 XBacon.Changeset.CEP.html
 XBacon.Changeset.CNPJ.html
 XBacon.Changeset.CPF.html
+XBacon.Changeset.CreditCard.html
 XBacon.Changeset.Email.html
 XBacon.Matchers.CEP.html
 XBacon.Matchers.CNPJ.html
 XBacon.Matchers.CPF.html
+XBacon.Matchers.CreditCard.html
 XBacon.Matchers.Email.html
 dist/app-7e84850c37.css
 dist/app-95540a96e6.js

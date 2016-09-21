@@ -8,9 +8,10 @@ defmodule XBacon.Stub.Person do
     field :cnpj, :string
     field :cep, :string
     field :email, :string
+    field :cc_number, :string
   end
 
-  @fields ~w(cpf cnpj cep email)a
+  @fields ~w(cpf cnpj cep email cc_number)a
 
   def changeset(model, params \\ %{}) do
     model
