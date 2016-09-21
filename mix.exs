@@ -9,10 +9,11 @@ defmodule XBacon.Mixfile do
     elixirc_paths: elixirc_paths(Mix.env),
     source_url: "https://github.com/joaoevangelista/xbacon",
     homepage_url: "https://github.com/joaoevangelista/xbacon",
-    deps: deps(),
     docs: [logo: "art/bacon.png",
     extras: ["README.md"]],
-    deps: deps()]
+    deps: deps(),
+    package: package(),
+    description: description()]
   end
 
   # Configuration for the OTP application
@@ -38,5 +39,21 @@ defmodule XBacon.Mixfile do
   defp deps do
     [{:ecto, ">= 2.0.0"},
     {:ex_doc, "~> 0.12", only: :dev}]
+  end
+
+  defp description do
+    """
+    A set of validators and matchers, focusing on Brazilian needs, but general too!
+    """
+  end
+
+  defp package do
+    [
+      name: :xbacon,
+      maintainers: ["João Pedro Evangelista"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/joaoevangelista/xbacon",
+               "Docs" => "https://joaoevangelista.github.io/xbacon"}
+    ]
   end
 end
