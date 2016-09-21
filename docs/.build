@@ -3,8 +3,10 @@ api-reference.html
 404.html
 dist/sidebar_items.js
 XBacon.html
+XBacon.Changeset.CEP.html
 XBacon.Changeset.CNPJ.html
 XBacon.Changeset.CPF.html
+XBacon.Matchers.CEP.html
 XBacon.Matchers.CNPJ.html
 XBacon.Matchers.CPF.html
 dist/app-7e84850c37.css
