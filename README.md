@@ -7,21 +7,6 @@ A set of validators and matchers, focusing on Brazilian needs, but general too!
 
 Here you can find useful validations for your changeset, or just matchers if you want!
 
-Available validations
----
-
- - CPF
-
-Planned
----
-
- - [ ] CNPJ
- - [ ] CEP
- - [ ] Titulo Eleitor
- - [ ] Email
-
-
----------------
 
 How do I use it ?
 -----
@@ -51,7 +36,8 @@ atom as second arity if your field is not named `:cpf`
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+
+The package can be installed as:
 
   1. Add `xbacon` to your list of dependencies in `mix.exs`:
 
